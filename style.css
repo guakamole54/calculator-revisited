@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.calculator {
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0px;
+}
+
+.display {
+    width: 220px;
+    height: 60px;
+    border: 1px solid black;
+    font-size: 40px;
+    text-align: end;
+    padding-right: 3px;
+}
+
+.calculator button {
+    width: 65px;
+    height: 65px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.calculator button:hover {
+    cursor: pointer;
+}
+
+.operator {
+    background-color: orange;
+}
+
+.operator:hover {
+    background-color: rgb(160, 105, 4);
+}
+
+.clickable {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 220px;
+    height: 400px;
+    justify-content: space-between;
+}
+
+
+#ac {
+    background-color: rgb(131, 4, 4);
+    color: white;
+}
+
+#ac:hover {
+    background-color: rgb(97, 3, 3);
+}
