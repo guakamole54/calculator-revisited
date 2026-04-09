@@ -49,6 +49,7 @@ function clearDisplay() {
     operator = "";
     operatorSelected = false;
     isEqualsDisplayed = false;
+    isDecimalUsed = false;
 
 }
 
@@ -65,7 +66,10 @@ buttons.addEventListener("click", (e) => {
         if (isEqualsDisplayed) {
             clearDisplay();
         }
-        if (!(display.textContent == 0 && e.target.textContent == 0)) {
+        if (!(display.textContent == 0 && e.target.textContent == 0) && (!isDecimalUsed || e.target.id != 'decimal')) {
+            if (e.target.id === 'decimal') {
+                isDecimalUsed = true;
+            }
             if (operatorSelected) {
                 if (secondNumber.length < 10) {
                     secondNumber += e.target.textContent;
@@ -103,6 +107,7 @@ buttons.addEventListener("click", (e) => {
             } else {
                 isEqualsDisplayed = true;
             }
+            isDecimalUsed = false;
         }
     }
 })
